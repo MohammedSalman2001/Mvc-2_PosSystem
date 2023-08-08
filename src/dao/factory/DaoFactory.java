@@ -1,6 +1,7 @@
 package dao.factory;
 
 import dao.custom.impl.CustomerDaoImpl;
+import dao.custom.impl.ItemDaoImp;
 
 public class DaoFactory {
     private static DaoFactory daoFactory;
@@ -23,6 +24,8 @@ public class DaoFactory {
             case CUSTOMER:
                 return (T) new CustomerDaoImpl();
 
+            case ITEM:
+                return (T) new ItemDaoImp();
             default:
                 return null;
 
